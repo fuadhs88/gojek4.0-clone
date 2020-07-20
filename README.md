@@ -4,6 +4,8 @@
 ![GitHub forks](https://img.shields.io/github/forks/rrifafauzikomara/gojek4.0-clone?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/rrifafauzikomara/gojek4.0-clone?style=social)
 
+🔥 This is a gojek 4.0 clone app built with Flutter framework
+
 ## 📸 Screenshot
 <pre>
 <img src="screenshot/home.png" width="28.5%">     <img src="screenshot/promo.png" width="30%">     <img src="screenshot/chat.png" width="30%">
