@@ -6,7 +6,7 @@
 
 ## 📸 Screenshot
 <pre>
-<img src="screenshot/home.png" width="28%">     <img src="screenshot/promo.png" width="30%">     <img src="screenshot/chat.png" width="30%">
+<img src="screenshot/home.png" width="29%">     <img src="screenshot/promo.png" width="30%">     <img src="screenshot/chat.png" width="30%">
 </pre>
 
 ## Modularization Structure 🔥
