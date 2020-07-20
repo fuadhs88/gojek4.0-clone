@@ -25,6 +25,17 @@
         └── widget             # Custom widget which can be used repeatedly.
 
 
+## Todo
+* [ ] Fix the code to make it more readable and clean
+* [ ] Add Splash Screen
+* [ ] Fix the UI size using custom MediaQuery to make responsive
+* [ ] Add background image behind Dashboard
+* [ ] Add list promo content in the Promo Tab
+* [ ] Add list content in the Home Tab
+
+## Finished
+* [x] Modular the project based on the functionality
+
 ## Author
 
 * **R Rifa Fauzi Komara**
