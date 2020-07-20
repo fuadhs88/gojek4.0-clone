@@ -32,6 +32,7 @@
 * [ ] Add background image behind Dashboard
 * [ ] Add list promo content in the Promo Tab
 * [ ] Add list content in the Home Tab
+* [ ] Support Dark Theme
 
 ## Finished
 * [x] Modular the project based on the functionality
