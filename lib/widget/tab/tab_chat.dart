@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gojekclone/tab_chat/chat_content.dart';
+import 'package:gojekclone/ui/chat/chat_page.dart';
 import 'package:rubber/rubber.dart';
 
 class TabChat extends StatefulWidget {
@@ -14,8 +14,8 @@ class TabChat extends StatefulWidget {
 class _TabChatState extends State<TabChat>
     with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   Size get size => MediaQuery.of(context).size;
-  double get tabIndicatorHeigth => 70;
-  double get rubberSheetHeight => size.height - tabIndicatorHeigth;
+  double get tabIndicatorHeight => 70;
+  double get rubberSheetHeight => size.height - tabIndicatorHeight;
 
   ScrollController scrollController = ScrollController();
   double _dampingValue = DampingRatio.LOW_BOUNCY;
@@ -93,7 +93,7 @@ class _TabChatState extends State<TabChat>
                       ),
                     ),
                     Expanded(
-                        child: ChatContent(
+                        child: ChatPage(
                       scrollController: scrollController,
                     )),
                   ],
@@ -148,6 +148,5 @@ class _TabChatState extends State<TabChat>
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GojekColors {
+class ColorPalettes {
   static const Color blue = Color(0xff02ACD3);
   static const Gradient orangeGradient = LinearGradient(
       colors: [Color(0xfff06502), Color(0xffffAD61)],

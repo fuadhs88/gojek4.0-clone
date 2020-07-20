@@ -1,39 +1,44 @@
-import 'dart:async';
 import 'dart:ui';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gojekclone/customlib/bubble_tab_indicator_custom.dart';
-import 'package:gojekclone/sliding_content.dart';
-import 'package:gojekclone/tab_chat/tab_chat.dart';
-import 'package:gojekclone/tab_home/tab_home.dart';
-import 'package:gojekclone/tab_promos/tab_promos.dart';
-import 'package:rubber/rubber.dart';
+import 'package:gojekclone/widget/sliding/sliding_content.dart';
+import 'package:gojekclone/widget/bubble/bubble_tab_indicator_custom.dart';
+import 'package:gojekclone/widget/tab/tab_chat.dart';
+import 'package:gojekclone/widget/tab/tab_home.dart';
+import 'package:gojekclone/widget/tab/tab_promos.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
-class HomeScreen extends StatefulWidget {
+class DashboardPage extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _DashboardPageState createState() => _DashboardPageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+class _DashboardPageState extends State<DashboardPage> with TickerProviderStateMixin {
   Size get size => MediaQuery.of(context).size;
+
   double get rubberSheetHeight => size.height - 70;
+
   double get sheetPercentage => rubberSheetHeight / size.height;
 
   double maxScreenHeight;
 
   TabController tabController;
+
   double get pageWidth => size.width;
+
   double get pageViewWidth => pageWidth * 1.02;
+
   double get widthFactor => 1.02;
+
   double get tabPaddingHorizontal =>
       ((widthFactor * pageWidth) - pageWidth) / 2;
 
-  final bubleTabIndicator = BubbleTabIndicator(
+  final bubbleTabIndicator = BubbleTabIndicator(
     indicatorHeight: 34.0,
     indicatorColor: Color(0xff017893),
   );
@@ -69,8 +74,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constrait) {
-      maxScreenHeight = constrait.maxHeight;
+    return LayoutBuilder(builder: (context, constraint) {
+      maxScreenHeight = constraint.maxHeight;
       return AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
@@ -78,8 +83,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           statusBarIconBrightness: Brightness.light,
         ),
         child: NotificationListener<OverscrollIndicatorNotification>(
-          onNotification: (overscroll) {
-            overscroll.disallowGlow();
+          onNotification: (overScroll) {
+            overScroll.disallowGlow();
             return true;
           },
           child: Scaffold(
@@ -115,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     margin: EdgeInsets.symmetric(vertical: 22),
                     child: TabBar(
                       controller: tabController,
-                      indicator: bubleTabIndicator,
+                      indicator: bubbleTabIndicator,
                       indicatorSize: TabBarIndicatorSize.label,
                       tabs: <Widget>[
                         Container(

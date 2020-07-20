@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
-import 'package:gojekclone/tab_promos/promos_content.dart';
+import 'package:gojekclone/ui/promo/promo_page.dart';
 import 'package:rubber/rubber.dart';
 
 class TabPromos extends StatefulWidget {
@@ -92,7 +92,7 @@ class _TabPromosState extends State<TabPromos>
                   ),
                 ),
                 Expanded(
-                    child: PromosContent(
+                    child: PromoPage(
                   scrollController: scrollController,
                 )),
               ],

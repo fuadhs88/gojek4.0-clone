@@ -1,13 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gojekclone/colors.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:gojekclone/common/styles/color_palettes.dart';
 
-class ChatContent extends StatelessWidget {
+class ChatPage extends StatelessWidget {
   final ScrollController scrollController;
 
-  ChatContent({this.scrollController});
+  ChatPage({this.scrollController});
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +86,7 @@ class ChatContent extends StatelessWidget {
                       width: 40,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: GojekColors.blue),
+                          color: ColorPalettes.blue),
                       child: Icon(
                         Icons.call_split,
                         color: Colors.white,
@@ -113,7 +111,7 @@ class ChatContent extends StatelessWidget {
                       width: 40,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: GojekColors.blue),
+                          color: ColorPalettes.blue),
                       child: Icon(
                         Icons.arrow_upward,
                         color: Colors.white,

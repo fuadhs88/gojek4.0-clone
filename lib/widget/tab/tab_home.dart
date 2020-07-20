@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gojekclone/tab_home/home_content.dart';
+import 'package:gojekclone/ui/home/home_page.dart';
 import 'package:rubber/rubber.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -11,6 +11,7 @@ class TabHome extends StatefulWidget {
 
   TabHome(
       {this.rubberSheetPercentage, this.sliderShow, this.slideUpButtonShow});
+
   @override
   _TabHomeState createState() => _TabHomeState();
 }
@@ -18,7 +19,9 @@ class TabHome extends StatefulWidget {
 class _TabHomeState extends State<TabHome>
     with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   double get pageWidth => MediaQuery.of(context).size.width;
+
   double get widthFactor => 1.02;
+
   double get tabPaddingHorizontal =>
       ((widthFactor * pageWidth) - pageWidth) / 2;
 
@@ -147,7 +150,7 @@ class _TabHomeState extends State<TabHome>
                     }
                     return true;
                   },
-                  child: HomeContent(
+                  child: HomePage(
                     controller: rubberSheetScrollCtrl,
                   ),
                 ),

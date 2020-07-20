@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gojekclone/home_screen.dart';
+import 'package:gojekclone/ui/dashboard/dashboard_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Lato',
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: DashboardPage(),
     );
   }
 }

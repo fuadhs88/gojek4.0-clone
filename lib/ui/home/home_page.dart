@@ -1,15 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gojekclone/customlib/scroll_snap_list_custom.dart';
-import 'package:gojekclone/tab_home/gopay_scroll_content.dart';
-import 'package:gojekclone/tab_home/item_list_indicator.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:gojekclone/widget/scroll/gopay_scroll_content.dart';
+import 'package:gojekclone/widget/indicator/item_list_indicator.dart';
+import 'package:gojekclone/widget/scroll/scroll_snap_list_custom.dart';
 
-class HomeContent extends StatelessWidget {
+class HomePage extends StatelessWidget {
   final ScrollController controller;
 
-  HomeContent({this.controller});
+  HomePage({this.controller});
 
   GlobalKey<ScrollSnapListState> sslKey = GlobalKey();
   ScrollController gopayScrollCtrl;

@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gojekclone/colors.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:gojekclone/common/styles/color_palettes.dart';
 
-class PromosContent extends StatelessWidget {
+class PromoPage extends StatelessWidget {
   final scrollController;
 
-  PromosContent({this.scrollController});
+  PromoPage({this.scrollController});
 
   @override
   Widget build(BuildContext context) {
@@ -24,21 +23,21 @@ class PromosContent extends StatelessWidget {
               Expanded(
                   flex: 1,
                   child: headerCard('3', 'Vouchers', '1 Expiring Soon',
-                      GojekColors.orangeGradient)),
+                      ColorPalettes.orangeGradient)),
               SizedBox(
                 width: 12,
               ),
               Expanded(
                   flex: 1,
                   child: headerCard('0', 'Subscription', 'Active now',
-                      GojekColors.blueGradient)),
+                      ColorPalettes.blueGradient)),
               SizedBox(
                 width: 12,
               ),
               Expanded(
                   flex: 1,
                   child: headerCard('0', 'Missions', 'In Progress',
-                      GojekColors.purpleGradient)),
+                      ColorPalettes.purpleGradient)),
             ],
           ),
         ),
@@ -60,7 +59,7 @@ class PromosContent extends StatelessWidget {
                   Icon(
                     Icons.people,
                     size: 28,
-                    color: GojekColors.blue,
+                    color: ColorPalettes.blue,
                   ),
                   'Got a promo code? Enter here')
             ],
